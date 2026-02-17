@@ -1023,12 +1023,17 @@
         }
 
         .reveal {
-            opacity: 0;
-            transform: translateY(40px);
+            opacity: 1;
+            transform: translateY(0);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .reveal.visible {
+        .js-loaded .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .js-loaded .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -1087,7 +1092,7 @@
 
     <!-- ==================== NAVBAR ==================== -->
     <nav>
-        <a href="#" class="nav-logo">construyo<span>TuProyecto</span>.com</a>
+        <a href="#" class="nav-logo">construye<span>TuWeb</span>.com</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#proceso">Proceso</a></li>
@@ -1454,7 +1459,7 @@
             <p class="section-subtitle reveal">Conversemos sobre tu proyecto. La primera consulta es gratuita y sin compromiso.</p>
             <div class="cta-buttons reveal">
                 <a href="https://wa.me/50660072890?text=Hola%20Juan%20Paulo,%20me%20interesa%20un%20proyecto%20web" class="btn-primary" target="_blank">💬 WhatsApp Directo</a>
-                <a href="/cdn-cgi/l/email-protection#97fff8fbf6d7d4f8f9e4e3e5e2eef8c3e2c7e5f8eef2f4e3f8b9f4f8fa" class="btn-secondary">✉ Enviar Email</a>
+                <a href="/cdn-cgi/l/email-protection#c8a0a7a4a9888ba7a6bbbcbabdb1a79cbd98baa7b1adabbca7e6aba7a5" class="btn-secondary">✉ Enviar Email</a>
             </div>
         </div>
     </section>
@@ -1463,7 +1468,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-left">
-                <a href="#" class="nav-logo" style="display:block; margin-bottom:0.5rem;">construyo<span>TuProyecto</span>.com</a>
+                <a href="#" class="nav-logo" style="display:block; margin-bottom:0.5rem;">construye<span>TuWeb</span>.com</a>
                 <p>© 2026 Juan Paulo Jiménez. Todos los derechos reservados.</p>
             </div>
             <div class="footer-links">
@@ -1481,7 +1486,10 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
+        // Activar animaciones solo cuando JS está disponible
+        document.body.classList.add('js-loaded');
+
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
