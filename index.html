@@ -6,6 +6,7 @@
     <title>ConstruyoTuProyecto.com | Juan Paulo Jiménez — Desarrollo Web & Shopify & PowerPlatform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
             --bg-primary: #0a0a0f;
@@ -79,7 +80,6 @@
             background-clip: text;
         }
 
-        /* Desktop nav links */
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -115,7 +115,6 @@
             transform: translateY(-1px);
         }
 
-        /* Hamburger button */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -140,17 +139,9 @@
             transform-origin: center;
         }
 
-        /* Hamburger active state (X) */
-        .hamburger.active span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
+        .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
         /* ===================== MOBILE MENU OVERLAY ===================== */
         .mobile-overlay {
@@ -200,14 +191,12 @@
         }
 
         .hero-glow-1 {
-            top: -10%;
-            right: -5%;
+            top: -10%; right: -5%;
             background: radial-gradient(circle, rgba(0,229,160,0.3), transparent 70%);
         }
 
         .hero-glow-2 {
-            bottom: -20%;
-            left: -10%;
+            bottom: -20%; left: -10%;
             background: radial-gradient(circle, rgba(123,97,255,0.2), transparent 70%);
         }
 
@@ -240,8 +229,7 @@
 
         .hero-badge::before {
             content: '';
-            width: 6px;
-            height: 6px;
+            width: 6px; height: 6px;
             background: var(--accent);
             border-radius: 50%;
             animation: pulse-dot 2s ease infinite;
@@ -333,7 +321,6 @@
             background: rgba(0,229,160,0.05);
         }
 
-        /* Hero visual card */
         .hero-visual {
             position: relative;
             animation: fadeInUp 0.8s ease 0.5s forwards;
@@ -352,9 +339,7 @@
         .hero-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--accent), transparent);
             opacity: 0.5;
@@ -421,8 +406,7 @@
 
         .floating-tag .dot {
             display: inline-block;
-            width: 6px;
-            height: 6px;
+            width: 6px; height: 6px;
             border-radius: 50%;
             margin-right: 6px;
         }
@@ -490,8 +474,7 @@
         }
 
         .marquee-item .sep {
-            width: 5px;
-            height: 5px;
+            width: 5px; height: 5px;
             background: var(--accent);
             border-radius: 50%;
             flex-shrink: 0;
@@ -524,8 +507,7 @@
 
         .section-label::before {
             content: '';
-            width: 20px;
-            height: 1px;
+            width: 20px; height: 1px;
             background: var(--accent);
         }
 
@@ -583,8 +565,7 @@
         }
 
         .service-icon {
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             border-radius: 14px;
             display: flex;
             align-items: center;
@@ -649,10 +630,8 @@
         .process-step::after {
             content: '';
             position: absolute;
-            top: 40px;
-            right: -1rem;
-            width: 2rem;
-            height: 1px;
+            top: 40px; right: -1rem;
+            width: 2rem; height: 1px;
             background: linear-gradient(90deg, var(--accent), transparent);
         }
 
@@ -730,8 +709,7 @@
 
         .about-exp-badge {
             position: absolute;
-            bottom: -15px;
-            left: -15px;
+            bottom: -15px; left: -15px;
             background: var(--accent);
             color: var(--bg-primary);
             padding: 1rem 1.5rem;
@@ -820,8 +798,7 @@
         }
 
         .portfolio-thumb-bg {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -902,8 +879,7 @@
         }
 
         .testimonial-avatar {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border-radius: 50%;
             background: var(--gradient-1);
             display: flex;
@@ -936,11 +912,9 @@
         .cta-section::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 500px;
-            height: 500px;
+            width: 500px; height: 500px;
             background: radial-gradient(circle, var(--accent-glow), transparent 70%);
             pointer-events: none;
         }
@@ -980,9 +954,58 @@
 
         .footer-left p {
             color: var(--text-dim);
-            font-size: 0.85rem;
+            font-size: 0.82rem;
+            margin-top: 0.3rem;
         }
 
+        /* ── Créditos con GitHub ── */
+        .footer-credits {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.55rem;
+            font-size: 0.82rem;
+            color: var(--text-dim);
+        }
+
+        .footer-credits strong {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .footer-credits .pipe {
+            opacity: 0.35;
+            user-select: none;
+        }
+
+        .footer-credits a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.25s ease;
+        }
+
+        .footer-credits a.github-link {
+            color: var(--text-secondary);
+        }
+
+        .footer-credits a.github-link:hover {
+            color: var(--accent);
+        }
+
+        .footer-credits a.contact-link {
+            color: var(--accent);
+        }
+
+        .footer-credits a.contact-link:hover {
+            color: var(--accent-dim);
+            text-decoration: underline;
+        }
+
+        /* ── Nav links footer ── */
         .footer-links {
             display: flex;
             gap: 2rem;
@@ -997,11 +1020,11 @@
 
         .footer-links a:hover { color: var(--accent); }
 
+        /* ── Social icons ── */
         .footer-social { display: flex; gap: 1rem; }
 
         .social-link {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border-radius: 50%;
             border: 1px solid var(--border);
             display: flex;
@@ -1009,7 +1032,7 @@
             justify-content: center;
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
         }
 
@@ -1031,15 +1054,8 @@
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .js-loaded .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-
-        .js-loaded .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .js-loaded .reveal { opacity: 0; transform: translateY(40px); }
+        .js-loaded .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* ===================== RESPONSIVE — TABLET ===================== */
         @media (max-width: 1024px) {
@@ -1054,20 +1070,13 @@
 
         /* ===================== RESPONSIVE — MOBILE ===================== */
         @media (max-width: 768px) {
-            /* Nav */
-            nav {
-                padding: 0 1.2rem;
-            }
-
+            nav { padding: 0 1.2rem; }
             .nav-logo { font-size: 1rem; }
 
-            /* Hide desktop links */
             .nav-links {
                 position: fixed;
                 top: var(--nav-height);
-                left: 0;
-                right: 0;
-                bottom: 0;
+                left: 0; right: 0; bottom: 0;
                 background: rgba(10, 10, 15, 0.98);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
@@ -1076,7 +1085,6 @@
                 padding: 2rem 1.5rem;
                 gap: 0;
                 z-index: 999;
-                /* Hidden by default */
                 opacity: 0;
                 pointer-events: none;
                 transform: translateX(100%);
@@ -1084,14 +1092,8 @@
                 border-left: 1px solid var(--border);
             }
 
-            .nav-links li {
-                border-bottom: 1px solid var(--border);
-            }
-
-            .nav-links li:last-child {
-                border-bottom: none;
-                padding-top: 1.5rem;
-            }
+            .nav-links li { border-bottom: 1px solid var(--border); }
+            .nav-links li:last-child { border-bottom: none; padding-top: 1.5rem; }
 
             .nav-links a {
                 display: block;
@@ -1112,26 +1114,20 @@
                 border-radius: 12px !important;
             }
 
-            /* Active state: slide in */
             .nav-links.active {
                 opacity: 1;
                 pointer-events: all;
                 transform: translateX(0);
             }
 
-            /* Show hamburger */
             .hamburger { display: flex; }
-
-            /* Body lock when menu open */
             body.menu-open { overflow: hidden; }
 
-            /* Hero */
             .hero { padding: 7rem 1.5rem 3rem; min-height: auto; }
             .hero h1 { letter-spacing: -1px; }
             .hero-stats { gap: 1.5rem; }
             .stat-number { font-size: 1.4rem; }
 
-            /* Sections */
             section { padding: 4rem 1.5rem; }
             .services-grid { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: 1fr; }
@@ -1141,6 +1137,8 @@
             .cta-buttons { flex-direction: column; align-items: center; }
             .footer-content { flex-direction: column; gap: 1.5rem; text-align: center; }
             .footer-links { flex-wrap: wrap; justify-content: center; }
+            .footer-credits { justify-content: center; }
+            .footer-social { justify-content: center; }
         }
 
         @media (max-width: 480px) {
@@ -1152,7 +1150,6 @@
 </head>
 <body>
 
-    <!-- Overlay oscuro al abrir el menú -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <!-- ==================== NAVBAR ==================== -->
@@ -1169,9 +1166,7 @@
         </ul>
 
         <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
     </nav>
 
@@ -1288,7 +1283,6 @@
                         <span class="service-tag">E-Commerce</span>
                     </div>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon">💻</div>
                     <h3>Desarrollo Web</h3>
@@ -1299,7 +1293,6 @@
                         <span class="service-tag">Responsive</span>
                     </div>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon">⚡</div>
                     <h3>Power Apps & Automatización</h3>
@@ -1310,7 +1303,6 @@
                         <span class="service-tag">Power BI</span>
                     </div>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon">🐍</div>
                     <h3>Soluciones Python</h3>
@@ -1321,7 +1313,6 @@
                         <span class="service-tag">Automatización</span>
                     </div>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon">📊</div>
                     <h3>Dashboards & BI</h3>
@@ -1332,7 +1323,6 @@
                         <span class="service-tag">Analytics</span>
                     </div>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon">🚀</div>
                     <h3>SEO & Optimización</h3>
@@ -1395,12 +1385,10 @@
                         <span>de experiencia</span>
                     </div>
                 </div>
-
                 <div class="about-text reveal">
                     <h3>Juan Paulo Jiménez</h3>
                     <p>Soy desarrollador web y programador radicado en Costa Rica, especializado en crear soluciones digitales que realmente impulsan negocios. Mi enfoque combina diseño atractivo con tecnología robusta para entregar resultados medibles.</p>
                     <p>Trabajo con emprendedores y empresas que quieren llevar su presencia digital al siguiente nivel — ya sea con una tienda Shopify que convierta, una aplicación empresarial con Power Apps, o automatizaciones inteligentes con Python.</p>
-
                     <div class="skills-list">
                         <span class="skill-pill">Shopify</span>
                         <span class="skill-pill">Python</span>
@@ -1426,42 +1414,31 @@
 
             <div class="portfolio-grid">
                 <div class="portfolio-card reveal">
-                    <div class="portfolio-thumb">
-                        <div class="portfolio-thumb-bg">E-COMMERCE</div>
-                    </div>
+                    <div class="portfolio-thumb"><div class="portfolio-thumb-bg">E-COMMERCE</div></div>
                     <div class="portfolio-info">
                         <h3>Tienda de Joyería Online</h3>
                         <p>E-commerce completo en Shopify con diseño personalizado y optimización de conversión.</p>
                         <span class="portfolio-type">Shopify · E-Commerce</span>
                     </div>
                 </div>
-
                 <div class="portfolio-card reveal">
-                    <div class="portfolio-thumb">
-                        <div class="portfolio-thumb-bg">DASHBOARD</div>
-                    </div>
+                    <div class="portfolio-thumb"><div class="portfolio-thumb-bg">DASHBOARD</div></div>
                     <div class="portfolio-info">
                         <h3>Panel de Control Empresarial</h3>
                         <p>Dashboard interactivo con Power BI para monitoreo de KPIs y métricas en tiempo real.</p>
                         <span class="portfolio-type">Power BI · Datos</span>
                     </div>
                 </div>
-
                 <div class="portfolio-card reveal">
-                    <div class="portfolio-thumb">
-                        <div class="portfolio-thumb-bg">APP</div>
-                    </div>
+                    <div class="portfolio-thumb"><div class="portfolio-thumb-bg">APP</div></div>
                     <div class="portfolio-info">
                         <h3>Gestión de Inventario</h3>
                         <p>Aplicación empresarial en Power Apps con automatizaciones y formularios dinámicos.</p>
                         <span class="portfolio-type">Power Apps · Automatización</span>
                     </div>
                 </div>
-
                 <div class="portfolio-card reveal">
-                    <div class="portfolio-thumb">
-                        <div class="portfolio-thumb-bg">AUTOMATION</div>
-                    </div>
+                    <div class="portfolio-thumb"><div class="portfolio-thumb-bg">AUTOMATION</div></div>
                     <div class="portfolio-info">
                         <h3>Automatización de Reportes</h3>
                         <p>Pipeline de datos con Python que automatiza la generación y envío de reportes semanales.</p>
@@ -1491,7 +1468,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card reveal">
                     <div class="testimonial-stars">★★★★★</div>
                     <blockquote>"La app en Power Apps que desarrolló para nuestro equipo nos ahorró horas de trabajo manual cada semana. Increíble profesionalismo."</blockquote>
@@ -1503,7 +1479,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card reveal">
                     <div class="testimonial-stars">★★★★★</div>
                     <blockquote>"Excelente comunicación y resultados. Mi sitio web no solo se ve espectacular, sino que carga rapidísimo y está bien posicionado en Google."</blockquote>
@@ -1535,10 +1510,27 @@
     <!-- ==================== FOOTER ==================== -->
     <footer>
         <div class="footer-content">
+
+            <!-- Izquierda: logo + copyright + créditos -->
             <div class="footer-left">
-                <a href="#" class="nav-logo" style="display:block; margin-bottom:0.5rem;">construyo<span>TuProyecto</span>.com</a>
+                <a href="#" class="nav-logo" style="display:block; margin-bottom:0.4rem;">
+                    construyo<span>TuProyecto</span>.com
+                </a>
                 <p>© 2026 Juan Paulo Jiménez. Todos los derechos reservados.</p>
+                <div class="footer-credits">
+                    Desarrollado por <strong>Paulo Jimenez</strong>
+                    <span class="pipe">|</span>
+                    <a href="https://github.com/pausherl" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <span class="pipe">|</span>
+                    <a href="https://walink.co/b4a464" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        Contáctame para desarrollo web
+                    </a>
+                </div>
             </div>
+
+            <!-- Centro: links de navegación -->
             <div class="footer-links">
                 <a href="#servicios">Servicios</a>
                 <a href="#proceso">Proceso</a>
@@ -1546,11 +1538,20 @@
                 <a href="#portafolio">Portafolio</a>
                 <a href="#contacto">Contacto</a>
             </div>
+
+            <!-- Derecha: iconos sociales con Font Awesome -->
             <div class="footer-social">
-                <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                <a href="#" class="social-link" aria-label="Instagram">ig</a>
-                <a href="#" class="social-link" aria-label="GitHub">gh</a>
+                <a href="https://www.linkedin.com/in/jpjimenez" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/jpjimenez" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/pausherl" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
+
         </div>
     </footer>
 
@@ -1559,9 +1560,9 @@
         document.body.classList.add('js-loaded');
 
         // ── Hamburger menu ───────────────────────────────────────
-        const hamburger    = document.getElementById('hamburger');
-        const navLinks     = document.getElementById('navLinks');
-        const overlay      = document.getElementById('mobileOverlay');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('navLinks');
+        const overlay   = document.getElementById('mobileOverlay');
 
         function openMenu() {
             navLinks.classList.add('active');
@@ -1586,15 +1587,12 @@
             navLinks.classList.contains('active') ? closeMenu() : openMenu();
         });
 
-        // Close on overlay click
         overlay.addEventListener('click', closeMenu);
 
-        // Close on nav link click
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
 
-        // Close on Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navLinks.classList.contains('active')) closeMenu();
         });
@@ -1602,11 +1600,9 @@
         // ── Navbar scroll effect ─────────────────────────────────
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
-            } else {
-                nav.style.boxShadow = 'none';
-            }
+            nav.style.boxShadow = window.scrollY > 100
+                ? '0 4px 30px rgba(0,0,0,0.3)'
+                : 'none';
         });
 
         // ── Scroll reveal ────────────────────────────────────────
@@ -1614,9 +1610,7 @@
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 80);
+                    setTimeout(() => entry.target.classList.add('visible'), index * 80);
                     revealObserver.unobserve(entry.target);
                 }
             });
